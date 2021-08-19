@@ -1,0 +1,223 @@
+html {
+  background-color: #325170;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    141deg,
+    #484f55 5%,
+    #325170 41%,
+    #1f4353 80%
+  );
+}
+
+body {
+  font-family: "Rubik", Helvetica, Arial, sans-serif;
+}
+
+#gameName {
+  font-size: 2em;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0.5em;
+  background-color: rgb(23, 36, 48);
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 0 3vh rgba(0, 0, 0, 0.445);
+}
+
+#container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-flow: column;
+  background-color: white;
+  margin: auto;
+  margin-top: 0;
+  box-shadow: 0 0 3vh rgba(0, 0, 0, 0.445);
+}
+
+.containerRow {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row;
+}
+
+#display {
+  height: 10vh;
+  width: 100%;
+  flex-flow: column nowrap;
+  /* overflow: hidden; */
+}
+
+input {
+  height: 70%;
+  font-size: 5vh;
+  text-align: right;
+  border-style: none;
+  padding: 0 1.5vh 1vh 2.5vh;
+  outline: none;
+  color: rgb(46, 46, 46);
+}
+
+/* Previous Inputs */
+#prevInputs-container {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-height: 30%;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  color: rgb(141, 141, 141);
+}
+
+#prevInputs-history {
+  padding: 0 10px;
+  position: absolute;
+  z-index: 2;
+}
+
+#prevInputs {
+  z-index: 3;
+  max-width: 100%;
+  text-align: right;
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
+  padding-right: 10px;
+  font-size: 2.5vh;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#prevInputs:empty {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+#prevInputs:not(:empty):hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+#prevInputs:empty::-moz-selection {
+  background: rgb(192, 192, 192);
+}
+
+#prevInputs:empty::selection {
+  background: rgb(192, 192, 192);
+}
+
+/* Calculator Buttons */
+button {
+  padding: 0;
+  width: 100%;
+  font-size: 4vh;
+  border-style: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  font-weight: bold;
+  color: rgb(46, 46, 46);
+  border: 1px solid rgb(211, 211, 211);
+}
+
+button:hover {
+  background-color: rgb(207, 207, 207);
+  border: 1px solid rgb(207, 207, 207);
+}
+
+button:active {
+  background-color: rgb(190, 190, 190);
+  border: 1px solid rgb(190, 190, 190);
+}
+
+.operations {
+  background-color: rgb(214, 214, 214);
+  border: 1px solid rgb(194, 194, 194);
+}
+
+.operations:hover {
+  background-color: rgb(187, 187, 187);
+}
+
+.operations:active {
+  background-color: rgb(170, 170, 170);
+}
+
+/* Equals (=) Button */
+#equals {
+  width: 200%;
+  box-sizing: border-box;
+  padding-left: 3px;
+  background-color: rgb(201, 155, 57);
+  border: none !important;
+}
+
+#equals:hover {
+  background-color: rgb(175, 135, 49);
+}
+
+#equals:active {
+  background-color: rgb(161, 125, 48);
+  border: none !important;
+}
+
+/* Delete Button */
+#delete {
+  color: transparent;
+}
+
+#delete i {
+  margin-left: -15px;
+  color: rgb(46, 46, 46);
+}
+
+/* Github Icon */
+#github {
+  color: rgb(23, 36, 48);
+  margin: 15px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+  #gameName {
+    font-size: 2.8em;
+  }
+
+  button {
+    font-size: 4.5vh;
+  }
+
+  #container {
+    width: 60vh;
+    margin-top: 3vh;
+  }
+
+  #github {
+    z-index: unset;
+  }
+}
+
+@media (pointer: coarse) {
+  button:hover {
+    background-color: rgb(239 239 239);
+  }
+
+  button:active {
+    background-color: rgb(207, 207, 207);
+    box-shadow: none;
+  }
+}
