@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Calculator</title>
+    <meta charset="UTF-8" />
+    <link href="styles/cssreset.css" rel="stylesheet" type="text/css" />
+    <link href="styles/stylesheet.css" rel="stylesheet" type="text/css" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0, user-scalable=no"
+    />
+    <script
+      src="https://kit.fontawesome.com/64486ec299.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <h1 id="gameName">Calculator</h1>
+
+    <main id="container">
+      <div class="containerRow" id="display">
+        <div id="prevInputs-container">
+          <i id="prevInputs-history" class="fas fa-history"></i>
+          <p id="prevInputs"></p>
+        </div>
+        <input id="inputs" type="text" onfocus="this.value = this.value;" />
+      </div>
+      <div class="containerRow">
+        <button>C</button>
+        <button id="delete">,<i class="fas fa-backspace"></i></button>
+        <button>+/-</button>
+        <button class="operations">÷</button>
+      </div>
+      <div class="containerRow">
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="operations">x</button>
+      </div>
+      <div class="containerRow">
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="operations">+</button>
+      </div>
+      <div class="containerRow">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="operations">-</button>
+      </div>
+      <div class="containerRow">
+        <button>0</button>
+        <button>.</button>
+        <button id="equals" class="operations">=</button>
+      </div>
+    </main>
+
+    <a id="github" href="https://github.com/foolmonkey"
+      ><i class="fab fa-github fa-3x"></i
+    ></a>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
